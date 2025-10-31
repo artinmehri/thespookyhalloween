@@ -1,1 +1,116 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Glitchy Color Scheme */
+:root {
+  /* Primary Colors */
+  --glitchy-dark: #000000;
+  /* Remap primary (was purple/blue) to brand red */
+  --glitchy-blue: #EF4444; /* primary */
+  --glitchy-blue-1000: #B91C1C; /* darker */
+  --glitchy-blue-light: #F87171; /* lighter */
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #8C8D92;
+  --text-muted: #6b7280;
+  
+  /* Background Colors */
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
+  --bg-accent: rgba(239, 68, 68, 0.2);
+  
+  /* Border Colors */
+  --border-primary: #374151;
+  --border-secondary: #4b5563;
+  
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(135deg, #EF4444, #B91C1C);
+  --gradient-secondary: linear-gradient(135deg, #F87171, #EF4444);
+  
+  /* Shadow Colors */
+  --shadow-primary: rgba(0, 0, 0, 0.5);
+  --shadow-secondary: rgba(239, 68, 68, 0.3);
+}
+
+/* Global Styles */
+body {
+  background-color: var(--glitchy-dark);
+  color: var(--text-primary);
+  font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Background Effects */
+.bg-glitchy-dark {
+  background-color: var(--glitchy-dark);
+}
+
+.bg-blue_1000 {
+  background-color: var(--glitchy-blue-1000);
+}
+
+.bg-blue-accent {
+  background-color: var(--bg-accent);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+/* Text Colors */
+.text-white {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Border Colors */
+.border-primary {
+  border-color: var(--border-primary);
+}
+
+.border-secondary {
+  border-color: var(--border-secondary);
+}
+
+/* Utility Classes */
+.blur-glow {
+  filter: blur(100px);
+  opacity: 0.8;
+}
+
+.blur-glow-lg {
+  filter: blur(400px);
+  opacity: 0.6;
+}
+
+/* Gradient Classes */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+/* Rainbow Border Animation */
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.rainbow-border {
+  background: linear-gradient(90deg, gold, #fc0, #b8860b, #000, gold, #fc0, #000);
+  background-size: 600% 600%;
+  animation: rainbow 15s linear infinite;
+}

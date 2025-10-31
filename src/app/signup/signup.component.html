@@ -1,0 +1,66 @@
+<div class="signup-container">
+  <div class="signup-header">
+    <div class="brand">
+      <div class="brand-text">Welcome to Glitchy</div>
+    </div>
+    <div class="subtitle">Sign Up Below</div>
+  </div>
+
+  <form class="signup-form">
+    <div class="form-group">
+      <label class="form-label">Username</label>
+      <input class="signup-input" type="text" placeholder="Enter your username" [(ngModel)]="username" name="username" />
+    </div>
+
+      <div class="form-group">
+        <label class="form-label">First Name</label>
+        <input class="signup-input" type="text" placeholder="Enter your legal first name" [(ngModel)]="firstName" name="firstName" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Last Name</label>
+        <input class="signup-input" type="text" placeholder="Enter your legal last name" [(ngModel)]="lastName" name="lastName" />
+      </div>
+
+    <div class="form-group">
+      <label class="form-label">Email</label>
+      <input class="signup-input" type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" />
+    </div>
+
+    <div class="form-group password-group">
+      <label class="form-label">Password</label>
+      <div class="password-wrap">
+        <input class="signup-input" [type]="showPassword ? 'text' : 'password'" placeholder="Enter password" [(ngModel)]="password" name="password" />
+        <button class="icon-button" type="button" (click)="togglePassword()" aria-label="Toggle password visibility">
+          <span class="icon-eye"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="form-group password-group">
+      <label class="form-label">Confirm Password</label>
+      <div class="password-wrap">
+        <input class="signup-input" [type]="showConfirm ? 'text' : 'password'" placeholder="Enter confirm password" [(ngModel)]="confirmPassword" name="confirmPassword" />
+        <button class="icon-button" type="button" (click)="toggleConfirm()" aria-label="Toggle confirm password visibility">
+          <span class="icon-eye"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="agreements">
+      <label class="checkbox">
+        <input type="checkbox" [(ngModel)]="agreeToTerms" name="agreeToTerms" />
+        <span>I agree to the <a class="form-link" href="#">Privacy Policy</a> and the <a class="form-link" href="#">Terms of Service</a></span>
+      </label>
+    </div>
+  </form>
+
+  <div class="cta-row">
+    <button class="signup-button" type="button" [disabled]="!isFormValid()" (click)="onSignup()">Sign Up</button>
+  </div>
+
+  <div class="switch-row">
+    <span class="muted">Don't have an account?</span>
+    <a class="form-link strong" routerLink="/login">Login</a>
+  </div>
+</div>
+

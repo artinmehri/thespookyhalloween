@@ -49,4 +49,5 @@ Thumbs.db
 
 # Environment and configuration files with secrets
 # Note: environment.ts is now tracked with placeholder values for showcase
+/src/environments/
 dataconnect/dataconnect.yaml

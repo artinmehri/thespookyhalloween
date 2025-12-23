@@ -45,3 +45,8 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
+.firebaserc
+
+# Environment and configuration files with secrets
+src/environments/environment.ts
+dataconnect/dataconnect.yaml

@@ -54,6 +54,24 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+## Environment Setup
+
+Before running this project, you need to configure your Firebase credentials:
+
+1. **Firebase Configuration:**
+   - Copy `src/environments/environment.example.ts` to `src/environments/environment.ts`
+   - Fill in your Firebase configuration values from your Firebase Console (Project Settings > General > Your apps)
+
+2. **Firebase Project:**
+   - Copy `.firebaserc.example` to `.firebaserc`
+   - Replace `YOUR_PROJECT_ID` with your actual Firebase project ID
+
+3. **Firebase Data Connect:**
+   - Copy `dataconnect/dataconnect.yaml.example` to `dataconnect/dataconnect.yaml`
+   - Update the `serviceId`, `database`, and `instanceId` values with your actual Firebase Data Connect configuration
+
+**Note:** The actual configuration files (`.firebaserc`, `environment.ts`, and `dataconnect.yaml`) are excluded from version control for security reasons. Only the example files are tracked in the repository.
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

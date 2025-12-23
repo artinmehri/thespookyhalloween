@@ -48,5 +48,5 @@ Thumbs.db
 .firebaserc
 
 # Environment and configuration files with secrets
-src/environments/environment.ts
+# Note: environment.ts is now tracked with placeholder values for showcase
 dataconnect/dataconnect.yaml
